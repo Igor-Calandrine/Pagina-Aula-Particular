@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Merriweather:opsz,wght@18..144,900&family=Poppins:wght@400;600&family=Roboto:wght@100..900&display=swap');
+@import url("../style/global.css");
+@import url("../style/nav.css");
+@import url("../style/footer.css");
+
+main {
+   font-family: var(--fontPrincipal);
+   font-size: 2rem;
+   max-width: 2000px;
+   margin: 80px auto;
+   display: flex;
+   justify-content: space-evenly;
+}
+
+main form {
+   justify-self: center;
+}
+
+main h2 {
+   font-weight: 400;
+}
+
+main textarea {
+   background-color: rgb(251, 249, 245);
+   margin-top: 40px;
+   font-size: 1rem;
+   padding: 16px;
+   border: 2px solid var(--fundoBotao);
+   box-shadow: 2px 2px 4px 1px rgba(255, 255, 245, 0.364);
+}
+
+main textarea:focus {
+   outline: none;
+   border: 2px solid var(--fundoBotao);
+   box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.509);
+}
+
+main .contatos{
+   display: grid;
+   gap: 28px;
+}
+
+main .contatos div:first-of-type {
+   margin-top: 40px;
+}
+
+main .contatos img, main .contatos a {
+   display: inline-block;
+
+}
+
+main .contatos a {
+   display: grid;
+   grid-template-columns: auto 1fr;
+   gap:40px;
+}
+
+.contatos a:hover img {
+   animation: girar 1.5s linear infinite;
+}
+
+.contatos p {
+   position: relative;
+   z-index: 12;
+   overflow: hidden;
+}
+
+.contatos p::before {
+  content: "";
+  position: absolute;
+  width: 15%;
+  height: 100%;
+  background: linear-gradient(
+    110deg,
+    transparent,
+    rgba(255, 255, 255, 0.806),
+    transparent
+  );
+}
+
+.contatos p::before {
+  animation: brilho 6s linear infinite;
+}
+
+@keyframes brilho {
+  from {
+    left: -100%;
+    
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes girar {
+   from {
+      transform: rotateY(0);
+   } 
+   to {
+      transform: rotateY(360deg);
+   }
+}
+

@@ -1,0 +1,24 @@
+@import url(./utilitários.css);
+* {
+   padding: 0px;
+   margin: 0px;
+   box-sizing: border-box;
+}
+
+body {
+   padding-bottom: 60px; /*tirar depois*/
+   background-color: rgb(253, 254, 255);
+}
+
+ul {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
+img {
+   display: block;
+}

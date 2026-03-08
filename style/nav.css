@@ -1,0 +1,59 @@
+nav {
+   font-family: "Roboto", sans-serif;
+   font-size: 1.5rem;
+   font-weight: 500;
+   background-color: rgb(248, 248, 248);
+   box-shadow: 0px 1px 8px 1px rgb(165, 165, 165);
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+nav .nome {
+   font-size: 3.2rem;
+   margin-left: 48px;
+}
+
+nav .nome:hover {
+   font-weight: 800;
+}
+
+nav ul {
+   color: var(--textoPrincipal);
+   display: flex;
+   justify-content: end;
+   margin-right: 100px;
+   gap: 60px;
+   padding: 32px 20px;
+}
+
+nav li {
+   cursor: pointer;
+}
+
+nav li a::after {
+   content: "";
+   display: block;
+   height: 2px;
+   width: 0px;
+   background-color: rgb(118, 47, 0);
+   position: absolute;
+   top: 48px;
+   transition: 1s;
+
+}
+
+nav li a:hover::after {
+   width: calc(100% - 40px);
+}
+
+nav a {
+   display: inline-block;
+   padding: 20px 20px;
+   transition: 0.4s;
+   position: relative;
+}
+
+nav a:hover {
+   color: rgb(118, 47, 0);
+}

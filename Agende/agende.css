@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Merriweather:opsz,wght@18..144,900&family=Poppins:wght@400;600&family=Roboto:wght@100..900&display=swap');
+@import url("../style/global.css");
+@import url("../style/nav.css");
+@import url("../style/footer.css");
+
+
+.agendamento {
+   font-family: var(--fontPrincipal);
+   max-width: 2000px;
+   margin: 80px auto;
+   text-align: center;
+   font-size: 1.6rem;
+}
+
+.agendamento h1 {
+   letter-spacing: 2px;
+   
+}
+
+.agendamento p:first-of-type {
+   margin-top: 32px;
+}
+
+.agendamento p {
+   line-height: 1.4;
+   color: rgb(56, 56, 56);
+}
+
+.contatos a{
+   margin: auto;
+   display: flex;
+   align-items: center;
+   gap: 20px;
+}
+
+.online img {
+   animation: girar 4s linear infinite;
+}
+
+.online span {
+   color: rgb(45, 45, 45);
+   transition: 1s;
+   animation: colorir 2.4s ease infinite alternate;
+}
+
+@keyframes colorir {
+   from {
+      color: rgb(45, 45, 45);
+   }
+   to {
+      color:var(--spanDecorativo)
+   }
+}
+
+.presencial {
+   margin-top: 80px;
+}
+
+.endereco {
+   margin: 32px;
+   display: flex;
+   justify-content: center;
+   gap: 60px;
+   text-align: left;
+}
+
+.endereco img {
+   max-width: 700px;
+}
+
+.logradouro {
+   align-self: center;
+}
+
+.logradouro p {
+   position: relative;
+}
+
+.logradouro p::before {
+   content: "";
+   display: block;
+   height: 8px;
+   width: 8px;
+   background-color: var(--spanDecorativo);
+   position: absolute;
+   top: 14px;
+   left: -24px;
+   transition: 0.8s;
+}
+
+.logradouro p:hover::before {
+   width: 16px;
+}

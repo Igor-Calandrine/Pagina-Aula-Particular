@@ -1,0 +1,86 @@
+footer {
+   margin-top: 80px;
+   font-family: var(--fontPrincipal);
+   background-color: rgb(18, 18, 18);
+   color: rgb(210, 210, 210);
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   align-items: center;
+   justify-items: center;
+   padding: 40px 20px;
+   height: 300px;
+}
+
+.comecar {
+   font-family: var(--fontSecundaria);
+   font-size: 2.5rem;
+   font-weight: 600;
+   align-self: start;
+   color: white;
+   margin-top: 20px;
+}
+
+.comecar img {
+   display: block;
+   width: 100px;
+   margin: 20px auto;
+}
+
+.info {
+   font-size: 1.25rem;
+   font-weight: 300;
+   line-height: 2;
+}
+
+.info p::before {
+   content: "";
+   display: block;
+   height: 8px;
+   width: 8px;
+   background-color: var(--spanDecorativo);
+   position: absolute;
+   top: 16px;
+   left: -24px;
+   transition: 0.8s;
+}
+
+.info p:hover::before {
+   background-color: rgb(255, 249, 188);
+   width: 16px;
+}
+
+.info p {
+   cursor: pointer;
+   display: grid;
+   position: relative;
+   
+}
+
+.info p:hover {
+   color: white;
+   transition: 0.5s;
+}
+
+.contatos {
+   display: flex;
+   gap: 12px;
+   justify-items: left;
+   margin-top: 12px;
+}
+
+.contatos img {
+   width: 40px;
+}
+
+.contatos img:hover {
+   animation: girar 1.5s linear infinite;
+}
+
+@keyframes girar {
+   from {
+      transform: rotateY(0);
+   } 
+   to {
+      transform: rotateY(360deg);
+   }
+}
