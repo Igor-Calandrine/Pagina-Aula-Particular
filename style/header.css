@@ -2,9 +2,8 @@ header {
    max-width: 2000px;
    margin: 100px auto;
    display: grid;
-   grid-template-columns: 1fr 2fr;
-   justify-content: stretch;
-   height: 1000px;
+   grid-template-columns: 1fr 1fr;
+   height: auto;
    background-color: var(--fundoHeader);
    border-radius: 4px;
 
@@ -15,23 +14,60 @@ header {
    width: 95%;
    padding: 20px;
    justify-self: center;
+   align-content: center;
+   display: grid;
+   justify-content: center;
+   gap: 32px;
    margin: 10px 10px;
    border-radius: 12px;
 }
 
-.h-texto h1 {
-   margin-top: 100px;
+.card-reforco {
+   background-color:  rgb(255, 221, 182);
+   padding: 32px;
+   border-radius: 12px;
+   width: 600px;
+   box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.336);
+}
+
+.card-reforco h1 {
    text-align: center;
-   font-size: 3rem;
+   font-size: 2.75rem;
    color: var(--textoPrincipal);
 }
 
-.h-texto h1:last-of-type {
-   margin-top: 100px;
+.card-reforco .brilho {
+   overflow: hidden;
+   position: relative;
+   display: inline-block;
 }
 
+.card-reforco .brilho::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    110deg,
+    transparent,
+    rgba(255, 255, 255, 0.806),
+    transparent
+  );
+  animation: brilho 3s linear infinite;
+}
+
+@keyframes brilho {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+
 .h-texto p:first-of-type {
-   margin-top: 40px;
+   margin-top: 20px;
 }
 
 .h-texto p {
@@ -41,12 +77,9 @@ header {
    color: var(--textoSecundario);
 }
 
-.h-img {
-   height: 1000px;
-}
 
 .h-img img{
-   width: 100%;
-   height: 100%;
+   justify-self: right;
+   max-width: 800px;
    object-fit: cover;
 }

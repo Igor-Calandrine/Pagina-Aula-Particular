@@ -1,0 +1,50 @@
+@import url("../style/global.css");
+@import url("../style/nav.css");
+@import url("../style/footer.css");
+
+main {
+   font-family: var(--fontPrincipal);
+   /* background-color: blue; */
+   max-width: 1600px;
+   margin: 80px auto;
+   padding: 20px 20px;
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   justify-items: center;
+   align-items: center;
+}
+
+.spanDecorativoAnimar {
+   display: inline-block;
+   height: max-content;
+   position: absolute;
+   transform: translate(5px, -5%);
+}
+
+.apresentacao-nome h1{
+   font-size: 4rem;
+}
+
+.apresentacao-nome p {
+   margin-top: 40px;
+   max-width: 35ch;
+   letter-spacing: 1.2px;
+   line-height: 1.5;
+   color: var(--textoPrincipal);
+   font-size: 1.125rem;
+}
+
+.apresentacao-img img {
+   max-width: 450px;
+}
+
+.apresentacao-xp {
+   margin-top: 40px;
+   font-size: 1,125rem;
+   color: var(--textoPrincipal);
+   line-height: 1.5;
+}
+
+.cards-pai {
+   background-color: blueviolet;
+}
