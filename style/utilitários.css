@@ -31,4 +31,19 @@
 
 .spanDecorativo {
    color: var(--spanDecorativo);
+   
+}
+
+.spanDecorativoAnimar {
+   animation: pulsar 1s linear infinite alternate;
+   display: inline-block;
+}
+
+@keyframes pulsar {
+   from {
+      scale: 100%;
+   }
+   to {
+      scale: 150%;
+   }
 }

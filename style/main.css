@@ -31,21 +31,59 @@ main {
    padding: 60px;
    display: flex;
    flex-wrap: wrap;
-   gap: 60px;
+   gap: 80px;
    justify-content:center;
+   align-content: center;
+   align-items: center;
+}
+
+.conteudos {
+   background-color: rgba(222, 149, 54, 0.125);
+   padding: 20px 32px;
+   border-radius: 8px;
+   min-width: 200px;
+   max-width: 600px;
+   text-align: center;
+   border: 3px solid transparent;
+
+   background:
+      linear-gradient(120deg, rgba(222,149,54,0.125), rgba(222, 149, 54, 0.079)) padding-box,
+      linear-gradient(120deg, transparent, rgb(255, 174, 25), transparent) border-box;
+   background-size: 200% 100%;
+   animation: bordaMove 3s linear infinite alternate;
+
+   transition: 1s;
+}
+
+.conteudos:hover {
+   background-color: rgba(222, 149, 54, 0.368);
+   scale: 110%;
    
 }
 
-.conteudos-pai h2 {
-   font-size: 1.75rem;
+@keyframes bordaMove {
+   from {
+      background-position: 0% 0;
+   }
+   to {
+      background-position: 100% 0;
+   }
 }
 
-.conteudos-pai img {
-   margin-top: 16px;
-   cursor: pointer;
-   max-width: 300px;
+.conteudos h2{
+   font-size: 1.75rem;
+   font-weight: 400;
+   color: rgb(40, 40, 40);
 }
 
 .conteudos-pai p {
    margin-top: 12px;
+}
+
+.sub-conteudo {
+   display: flex;
+   justify-content: space-around;
+   text-align: center;
+   font-size: 0.75rem;
+   color: rgb(74, 74, 74);
 }

@@ -20,6 +20,10 @@ footer {
    margin-top: 20px;
 }
 
+.comecar p {
+   position: relative;;
+}
+
 .comecar img {
    display: block;
    width: 100px;
@@ -70,10 +74,7 @@ footer {
 
 .contatos img {
    width: 40px;
-}
-
-.contatos img:hover {
-   animation: girar 1.5s linear infinite;
+   animation: girar 2s linear infinite;
 }
 
 @keyframes girar {
