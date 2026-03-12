@@ -4,7 +4,6 @@
 
 main {
    font-family: var(--fontPrincipal);
-   /* background-color: blue; */
    max-width: 1600px;
    margin: 80px auto;
    padding: 20px 20px;
@@ -44,6 +43,116 @@ main {
    line-height: 1.5;
 }
 
-.cards-pai {
-   background-color: blueviolet;
+section {
+   max-width: 1600px;
+   margin: auto;
 }
+
+.cards-pai {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 60px;
+   justify-content: center;
+}
+
+.cards {
+   padding: 16px;
+   border-radius: 8px;
+   
+   border-top: 4px solid rgb(255, 187, 127);
+   border-left: 4px solid rgba(255, 187, 127);
+   border-bottom: 4px solid rgb(206, 108, 23);
+   border-right: 4px solid rgb(197, 109, 32);
+   background-color: rgb(255,153,65);
+   background:
+   linear-gradient(
+      45deg, 
+      rgb(255, 153, 65) 0%,
+      rgb(255, 153, 65) 45%,
+      rgb(255, 193, 139) 50%, 
+      rgb(255, 153, 65) 52%,
+      rgb(255, 153, 65) 100%);
+
+      background-size: 300%, 100%;
+
+   animation: movBackCards 8s linear infinite;
+
+   transition: 1s;
+}
+
+@keyframes movBackCards {
+   0% {
+      background-position: 100%;
+   }
+   100% {
+      background-position: -50%;
+   }
+}
+
+.cards:hover {
+   scale: 95%;
+}
+
+.cards > div:first-child {
+   max-width: 300px;
+   max-height: 300px;
+   border: 2px solid rgb(114, 114, 114);
+   border-radius: 4px;
+}
+
+.cards img {
+   max-width: 100%;
+   border-radius: 4px;
+}
+
+.card-descricao {
+   margin-top: 12px;
+   background: linear-gradient(
+      to top,
+      var(--fundoBotao2),
+      var(--fundoBotao1),
+      var(--fundoBotao2));
+
+   border-radius: 4px;
+   padding: 12px;
+
+   border-top: 2px solid rgba(255,255,255,0.44);
+   border-left: 2px solid rgba(255, 255, 255, 0.44);
+   border-bottom: 2px solid rgba(0,0,0,0.166);
+   border-right: 2px solid rgba(0, 0, 0, 0.166);
+}
+
+.cards h2 {
+   font-family: var(--fontPrincipal);
+   font-size: 1rem;
+   font-weight: 400;
+
+   background: linear-gradient(
+    110deg,
+    rgb(0, 0, 0),
+    rgba(255, 255, 255, 0.973),
+    rgb(0, 0, 0)
+  );
+   background-size: 200% 100%;
+   
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: brilhoTexto 5s linear infinite;
+}
+
+@keyframes brilhoTexto {
+   from {
+      background-position: 100% 0;
+   }
+   to {
+      background-position: -100% 0;
+   }
+}
+
+.cards p {
+   font-weight: 200;
+   font-size: 0.75rem;
+   margin-top: 10px;
+}
+
+

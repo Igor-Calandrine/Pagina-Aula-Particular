@@ -5,13 +5,14 @@ header {
    grid-template-columns: 1fr 1fr;
    height: auto;
    border-radius: 4px;
-   /* background-color: var(--fundoHeader); */
+   
    background: radial-gradient(
    circle at center,
    rgb(255, 247, 236) 10%,
    rgb(255, 220, 180) 60%,
    rgb(255, 206, 146) 30%
 );
+
 
 }
 
@@ -29,11 +30,40 @@ header {
 }
 
 .card-reforco {
-   background-color:  rgb(255, 221, 182);
+   background: 
+radial-gradient(
+   circle at top left,
+   rgb(255, 245, 233) 0%,
+   rgb(255, 221, 182) 40%,
+   transparent 60%
+),
+radial-gradient(
+   circle at bottom right,
+   rgb(255, 183, 100) 0%,
+   rgb(255, 221, 182) 50%,
+   transparent 70%
+),
+rgb(255, 210, 158);
+   background-size: 100% 100%, 140% 140%, auto;
    padding: 32px;
    border-radius: 12px;
    width: 500px;
    box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.336);
+   animation: backMov 2.5s ease infinite alternate;
+}
+
+@keyframes backMov {
+   0%{
+      background-size: 100% 100%, 140% 140%, auto;
+   }
+
+   50%{
+      background-size: 140% 140%, 120% 120%, auto;
+   }
+
+   100%{
+      background-size: 110% 110%, 110% 110%, auto;
+   }
 }
 
 .card-reforco h1 {
@@ -80,9 +110,9 @@ header {
    color: var(--textoSecundario);
 }
 
-
-.h-img img{
-   justify-self: right;
-   max-width: 800px;
-   object-fit: cover;
+.h-img {
+   
+   background-image:url("../img/aluna-modelo4.jpg");
+   background-position: center;
+   background-size: cover;
 }
