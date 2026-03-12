@@ -16,9 +16,8 @@ main {
 
 .spanDecorativoAnimar {
    display: inline-block;
-   height: max-content;
    position: absolute;
-   transform: translate(5px, -5%);
+   transform: translate(5px, -2px);
 }
 
 .apresentacao-nome h1{

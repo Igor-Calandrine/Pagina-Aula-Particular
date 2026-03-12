@@ -27,7 +27,14 @@ main {
 }
 
 .conteudos-pai {
-   background-color: rgb(248, 248, 248);
+   /* background-color: rgb(248, 248, 248); */
+   background:
+   radial-gradient(circle at 20% 30%, #ffffff 0%, #f5f7f8 25%, transparent 40%),
+   radial-gradient(circle at 70% 60%, #eef2f3 0%, #ffffff 30%, transparent 45%),
+   radial-gradient(circle at 40% 80%, #f4f9fc 0%, #e9eef0 35%, transparent 50%),
+   #f7fafb;
+   background-size: 200% 100%;
+   
    padding: 60px;
    display: flex;
    flex-wrap: wrap;
@@ -35,7 +42,19 @@ main {
    justify-content:center;
    align-content: center;
    align-items: center;
+   animation: backmove 8s linear infinite alternate;
 }
+
+@keyframes backmove {
+   from {
+      background-position: 100% 0;
+   }
+   to {
+      background-position: 0% 0;
+   }
+}
+
+
 
 .conteudos {
    background-color: rgba(222, 149, 54, 0.125);
@@ -47,12 +66,20 @@ main {
    border: 3px solid transparent;
 
    background:
-      linear-gradient(120deg, rgba(222,149,54,0.125), rgba(222, 149, 54, 0.079)) padding-box,
-      linear-gradient(120deg, transparent, rgb(255, 174, 25), transparent) border-box;
+      linear-gradient(120deg, rgba(222,151,54,0.125), rgba(222, 151, 54, 0.079)) padding-box,
+      linear-gradient(120deg, transparent, rgb(255, 151, 25), transparent) border-box;
    background-size: 200% 100%;
-   animation: bordaMove 3s linear infinite alternate;
+   animation: bordaMove 3s ease infinite alternate;
 
    transition: 1s;
+}
+
+#fisica {
+   animation: bordaMove 3.5s linear infinite alternate;
+}
+
+#program {
+   animation: bordaMove 4s ease infinite alternate;
 }
 
 .conteudos:hover {
