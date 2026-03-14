@@ -1,13 +1,14 @@
 main {
    font-family: var(--fontPrincipal);
    max-width: 2000px;
-   margin: auto;
+   margin: 60px auto 0px auto;
    display: grid;
    grid-template-columns: 1fr 2fr;
 }
 
 .container-ensino1 {
    padding: 0px 40px;
+   min-width: 300px;
 }
 
 .container-ensino1 h1 {
@@ -115,4 +116,40 @@ main {
    text-align: center;
    font-size: 0.75rem;
    color: rgb(74, 74, 74);
+}
+
+@media (max-width:1000px) {
+   .conteudos-pai {
+      padding: 30px;
+      gap: 60px;
+   }
+
+}
+
+@media (max-width:700px) {
+   main {
+      grid-template-columns: 1fr;
+   }
+
+   .conteudos h2 {
+      font-size: 1.5rem;
+   }
+
+}
+
+@media (max-width:400px) {
+   main {
+      gap: 40px;
+   }
+   .conteudos-pai {
+      gap: 40px;
+   }
+
+   .conteudos {
+      padding: 12px 24px;
+   }
+
+   .conteudos h2 {
+      font-size: 1.25rem;
+}
 }

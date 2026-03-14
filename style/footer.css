@@ -5,10 +5,10 @@ footer {
    color: rgb(210, 210, 210);
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
+   /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
    align-items: center;
    justify-items: center;
    padding: 40px 20px;
-   height: 300px;
 }
 
 .comecar {
@@ -87,5 +87,37 @@ footer {
    } 
    to {
       transform: rotateY(360deg);
+   }
+}
+
+@media (max-width:750px) {
+   footer {
+      grid-template-columns: 1fr 1fr;
+
+   }
+   .comecar {
+      grid-column: span 2;
+   }
+}
+
+@media (max-width:550px) {
+   footer {
+      grid-template-columns: 1fr;
+
+   }
+
+   .comecar {
+      grid-column: span 1;
+      text-align: center;
+   }
+
+   footer div:nth-child(3) {
+      position: relative;
+      left: 28px;
+   }
+
+   .contatos {
+      margin-left: -40px;
+      
    }
 }

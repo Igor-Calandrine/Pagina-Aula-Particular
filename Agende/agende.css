@@ -59,13 +59,18 @@
 .endereco {
    margin: 32px;
    display: flex;
+   flex-wrap: wrap;
    justify-content: center;
    gap: 60px;
    text-align: left;
 }
 
-.endereco img {
+.mapa {
    max-width: 700px;
+}
+
+.mapa img{
+   width: 100%;
 }
 
 .logradouro {
@@ -90,4 +95,38 @@
 
 .logradouro p:hover::before {
    width: 16px;
+}
+
+@media (max-width:1100px) {
+   .endereco {
+      gap: 40px;
+      text-align: left;
+   }  
+   .mapa img{
+      max-width: 450px;
+   } 
+
+   .presencial {
+      margin-top: 40px;
+   }
+}
+
+@media (max-width:750px) {
+   .agendamento h1 {
+      font-size: 2.125rem;
+   }
+
+   .agendamento p:first-of-type {
+      margin-top: 16px;
+   }
+   
+   .agendamento p {
+      font-size: 1.25rem;
+   }
+
+   .endereco {
+      gap: 20px;
+   }
+
+ 
 }

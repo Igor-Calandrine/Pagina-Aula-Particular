@@ -10,6 +10,7 @@ nav {
 }
 
 nav .nome {
+   min-width: max-content;
    font-size: 3.2rem;
    margin-left: 48px;
 }
@@ -20,11 +21,13 @@ nav .nome:hover {
 
 nav ul {
    color: var(--textoPrincipal);
-   display: flex;
+   display: grid;
+   grid-template-columns: auto auto auto;
    justify-content: end;
-   margin-right: 100px;
+   justify-items: end;
+   margin-right: 80px;
    gap: 60px;
-   padding: 32px 20px;
+   padding: 32px 0px;
 }
 
 nav li {
@@ -56,4 +59,111 @@ nav a {
 
 nav a:hover {
    color: rgb(118, 47, 0);
+}
+
+.menu-hamburguer {
+   margin-right: 20px;
+}
+
+@media (max-width: 1200px) {
+   nav ul {
+      font-size: 1.5rem;
+      margin-right: 10px;
+      gap: 10px;
+   }
+
+   nav li a::after { 
+      top: 44px;
+   }
+}
+
+@media (max-width: 850px) {
+   nav .nome {
+      font-size: 3.2rem;
+      margin-left: 20px;
+   }
+
+   nav ul {
+      margin-right: 0px;
+      padding: 0px 10px;
+   }
+
+   nav a {
+      padding: 12px;
+   }
+
+   nav li a::after { 
+      top: 36px;
+   }
+
+   nav li a:hover::after {
+   width: calc(100% - 24px);
+   }
+}
+
+@media (max-width:750px) {
+   nav {
+      position: relative;
+   }
+   nav ul {
+      position: absolute;
+      top: 80px;
+      right: 10px;
+      background-color: rgb(247, 247, 247);
+      max-width: 700px;
+      min-width: 300px;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 4px;
+      border: 1px solid var(--spanDecorativo);
+
+      height: auto;
+   }
+
+   nav ul li {
+      position: relative;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+   }
+
+   nav ul li::before {
+      content: "";
+      display: block;
+      background-color: var(--spanDecorativo);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+   }
+
+   nav ul li:nth-child(1) {
+      min-width: max-content;
+      justify-self: center;
+      grid-column: span 2;
+   }
+
+   nav ul li:nth-child(2) {
+      justify-self: left;
+   }
+
+   nav ul li:nth-child(3) {
+      grid-column: 3;
+      justify-self: left;
+      align-self: top;
+   }
+
+   .menu-hamburguer {
+      display: flex;
+   }
+}
+
+@media (max-width: 400px) { 
+   nav .nome {
+      font-size: 2.75rem;
+   }
+
+   nav ul {
+      gap: 4px;
+   }
 }

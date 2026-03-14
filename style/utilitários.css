@@ -56,3 +56,27 @@
       scale: 150%;
    }
 }
+
+.menu-hamburguer {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--spanDecorativo);
+  padding: 8px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  display: none;
+}
+
+.menu-hamburguer span {
+  display: block;
+  width: 80%;
+  height: 3px;
+  background: black;
+  border-radius: 4px;
+}
+

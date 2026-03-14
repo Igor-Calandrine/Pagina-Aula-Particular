@@ -5,7 +5,7 @@
 main {
    font-family: var(--fontPrincipal);
    max-width: 1600px;
-   margin: 80px auto;
+   margin: 80px auto 0px auto;
    padding: 20px 20px;
    display: grid;
    grid-template-columns: 1fr 2fr;
@@ -19,7 +19,7 @@ main {
    transform: translate(5px, -2px);
 }
 
-.apresentacao-nome h1{
+.apresentacao-nome h1, section h1{
    font-size: 4rem;
 }
 
@@ -32,8 +32,12 @@ main {
    font-size: 1.125rem;
 }
 
-.apresentacao-img img {
+.apresentacao-img {
    max-width: 450px;
+}
+
+.apresentacao-img img {
+   width: 100%;
 }
 
 .apresentacao-xp {
@@ -44,8 +48,9 @@ main {
 }
 
 section {
+   padding: 12px;
    max-width: 1600px;
-   margin: auto;
+   margin: 40px auto 0px auto;
 }
 
 .cards-pai {
@@ -53,6 +58,7 @@ section {
    flex-wrap: wrap;
    gap: 60px;
    justify-content: center;
+   margin-top: 40px;
 }
 
 .cards {
@@ -108,7 +114,7 @@ section {
 .card-descricao {
    margin-top: 12px;
    background: linear-gradient(
-      to top,
+      180deg,
       var(--fundoBotao2),
       var(--fundoBotao1),
       var(--fundoBotao2));
@@ -155,4 +161,20 @@ section {
    margin-top: 10px;
 }
 
+@media (max-width:1000px) {
+   main {
+      grid-template-columns: 1fr;
+      gap: 40px;
+   }
+
+   .apresentacao-nome p {
+      max-width: 45ch;
+   }
+}
+
+@media (max-width:400px) {
+   .apresentacao-nome h1{
+   font-size: 3rem;
+}
+}
 
