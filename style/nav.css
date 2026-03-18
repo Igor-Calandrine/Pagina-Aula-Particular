@@ -106,20 +106,24 @@ nav a:hover {
    nav {
       position: relative;
    }
-   nav ul {
-      position: absolute;
-      top: 80px;
-      right: 10px;
+   nav ul[data-menu] {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
       background-color: rgb(247, 247, 247);
       max-width: 700px;
       min-width: 300px;
-      grid-template-columns: 1fr 1fr 1fr;
       justify-content: center;
       gap: 10px;
       border-radius: 4px;
       border: 1px solid var(--spanDecorativo);
-
       height: auto;
+      position: absolute;
+      top: 80px;
+      right: 10px;
+   }
+
+   nav ul { 
+      display: none;
    }
 
    nav ul li {
