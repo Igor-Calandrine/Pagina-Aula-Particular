@@ -15,8 +15,9 @@ nav .nome {
    margin-left: 48px;
 }
 
-nav .nome:hover {
+nav:hover .nome {
    font-weight: 800;
+   color: rgb(118, 47, 0);
 }
 
 nav ul {
