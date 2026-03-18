@@ -147,12 +147,13 @@ main .contatos-interno a {
    }
 }
 
-@media (max-width:400px) {
+@media (max-width:500px) {
    .contatos-interno {
-      margin-top: 20px;
-      grid-template-columns: 1fr 1fr 1fr;
+      margin: 20px auto 0 auto;
+      grid-template-columns: auto auto auto;
       align-items: center;
       justify-items: center;
+      gap: 12px;
    }
 
    .contatos-interno div:first-of-type {
@@ -161,6 +162,10 @@ main .contatos-interno a {
 
    .contatos-interno p {
       display: none;
+   }
+
+   .link-botao {
+      padding: 12px;
    }
 }
  

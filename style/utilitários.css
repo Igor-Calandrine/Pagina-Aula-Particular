@@ -62,10 +62,10 @@
   height: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   background: var(--spanDecorativo);
-  padding: 8px;
+  padding: 4px;
   border: 1px solid transparent;
   border-radius: 8px;
   cursor: pointer;

@@ -26,7 +26,12 @@
    color: rgb(56, 56, 56);
 }
 
-.contatos a{
+.link-numero {
+   display: inline-block;
+   margin: 24px auto 0 auto;
+}
+
+.link-numero a {
    margin: auto;
    display: flex;
    align-items: center;
@@ -34,6 +39,7 @@
 }
 
 .online img {
+   max-width: 40px;
    animation: girar 4s linear infinite;
 }
 

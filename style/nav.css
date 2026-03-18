@@ -73,7 +73,7 @@ nav a:hover {
    }
 
    nav li a::after { 
-      top: 44px;
+      top: 48px;
    }
 }
 
@@ -93,7 +93,7 @@ nav a:hover {
    }
 
    nav li a::after { 
-      top: 36px;
+      top: 40px;
    }
 
    nav li a:hover::after {
@@ -128,14 +128,44 @@ nav a:hover {
       align-items: center;
    }
 
+   nav li a::after {
+      display: none;
+   }
+
+   nav ul li:first-child {
+      position: relative;
+      top: 25px;
+   }
+
    nav ul li::before {
       content: "";
       display: block;
       background-color: var(--spanDecorativo);
-      width: 10px;
-      height: 10px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
+      position: relative;;
+      transform: translateX(4px);
    }
+
+   nav ul li:hover::before {
+      animation: shakeX 1s ease-in-out infinite;
+   }
+
+   @keyframes shakeX {
+  0%, 100% {
+    transform: translateX(4px);
+  }
+  25% {
+    transform: translateX(1px);
+  }
+  50% {
+    transform: translateX(7px);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+}
 
    nav ul li:nth-child(1) {
       min-width: max-content;
