@@ -149,7 +149,7 @@ nav a:hover {
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      position: relative;;
+      position: relative;
       transform: translateX(4px);
    }
 

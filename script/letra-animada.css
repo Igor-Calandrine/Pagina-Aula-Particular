@@ -1,0 +1,33 @@
+.letrasAparecendo {
+   animation: letrasAparecendo 1.5s ease;
+}
+
+@keyframes letrasAparecendo {
+   from {
+      top: -50px;
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+      top: 0px;
+   }
+}
+
+.letrasDeslocando {
+   position: relative;
+   animation: letrasDeslocando 1.5s ease;
+}
+
+@keyframes letrasDeslocando {
+   from{
+      top: -50px;
+   }
+   to {
+      top: 0px;
+   }
+}
+
+/* .letrasAparecendo.letrasCima {
+   animation: letrasAparecendo 1.5s ease, letrasDeslocando 1.5s ease;
+} */
+

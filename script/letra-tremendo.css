@@ -1,0 +1,19 @@
+.letrasTremendo {
+   position: relative;
+   animation: shake 0.8s linear infinite;
+}
+
+@keyframes shake {
+  0%, 100% {
+    left: 0;
+  }
+  25% {
+    left: 3px;
+  }
+  50% {
+    left: -2px;
+  }
+  75% {
+    left: 2px;
+  }
+}
